@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Main="*res://Main.tscn"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 player_move_up={

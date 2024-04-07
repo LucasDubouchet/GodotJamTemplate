@@ -16,7 +16,7 @@ script = ExtResource("1_xv074")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.02903, 0)
 
 [node name="Obstacle" parent="." instance=ExtResource("4_l2qba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.44523, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 43.3755, 0)
