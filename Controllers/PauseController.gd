@@ -2,10 +2,6 @@ extends Node
 
 var pauseMenu
 
-@export var mouseModeOnPause: Input.MouseMode = Input.MOUSE_MODE_VISIBLE
-
-@export var mouseModeOnResume: Input.MouseMode = Input.MOUSE_MODE_CAPTURED
-
 func _ready():
 	self._initialization()
 	
@@ -28,14 +24,9 @@ func _handlePauseInput():
 		
 		var paused = get_node("/root").get_child(0).get_tree().paused
 		pauseMenu.visible = !paused
-		if pauseMenu.visible:
-			Input.set_mouse_mode(mouseModeOnPause)
-		else:
-			Input.set_mouse_mode(mouseModeOnResume)
 		get_node("/root").get_child(0).get_tree().paused = !paused
 		Main.setInLevelPauseGameMode(paused)
 
 func _onResumeButtonPressed():
 	get_node("/root").get_child(0).get_tree().paused = false
-	Input.set_mouse_mode(mouseModeOnResume)
 	pauseMenu.visible = false
